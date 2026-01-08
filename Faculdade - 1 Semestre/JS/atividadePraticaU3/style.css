@@ -1,0 +1,142 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contêiner principal */
+.container-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Menu vertical */
+.menuvertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Título e instrução */
+.menuvertical h1 {
+  font-size: 28px;
+  color: #6a1b9a;
+  margin-bottom: 10px;
+}
+
+.menuvertical p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Botões do jogo */
+.botoesJogo {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.botao {
+  background-color: #6a1b9a;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #8e24aa;
+}
+
+/* Área de resultado */
+.campojogo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.jogador,
+.maquina,
+.resultado {
+  background-color: #e0e0e0;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+/* Cores dinâmicas para resultado */
+
+
+.resultado.vitoria {
+  animation: piscaVerde 0.8s ease;
+  background-color: #85e688;
+  color: #2e7d32;
+}
+@keyframes piscaVerde {
+  0% {background-color: #eeeeee;}
+  25% {background-color: #85e688;}
+  60% {background-color: #eeeeee;}
+  100% {background-color: #85e688;}
+}
+
+.resultado.derrota {
+  animation: piscaVermelho 0.8s ease;
+  background-color: #e8949d;
+  color: #c62828;
+}
+@keyframes piscaVermelho {
+  0% {background-color: #eeeeee;}
+  25% {background-color: #e8949d;}
+  60% {background-color: #eeeeee;}
+  100% {background-color: #e8949d;}
+}
+
+.resultado.empate {
+  animation: piscacinza 0.8s ease;
+  background-color: #eeeeee;
+  color: #616161;
+}
+@keyframes piscacinza {
+  0% {background-color: #eeeeee;}
+  25% {background-color: #989797;}
+  60% {background-color: #eeeeee;}
+  100% {background-color: #989797;}
+}
+.negrito{
+  font-weight: bold;
+}
+
+.resetar{
+  background-color: #6a1b9a;
+  color: white;
+  margin: 15px;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}

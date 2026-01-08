@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <script>
+        let hora = 9; //horario que começa
+        let minutos = 30; // tempos de entrevistas
+        let entrevistasCandidatos = 0; // candidatos já escolhidos
+        let saida = 16; // horario de fim de entrevistas
+
+        let entrevistados = [
+            'Nome Sobrenome_7',
+            'Nome Sobrenome_2',
+            'Nome Sobrenome_11',
+            'Nome Sobrenome_4',
+            'Nome Sobrenome_9',
+            'Nome Sobrenome_1',
+            'Nome Sobrenome_12',
+            'Nome Sobrenome_6',
+            'Nome Sobrenome_3',
+            'Nome Sobrenome_10',
+            'Nome Sobrenome_8',
+            'Nome Sobrenome_5',
+        ]
+        entrevistados.sort();
+        for (i = hora; i <= saida; i = i + 1 ) {
+            if ((i == 12 ) || (i == 16)) { // o primeiro numero ele não deixa marca horario no "almoço"
+            //pois 12 está ocupado. e 16 horas pois está ocuapdo também
+                continue
+            }
+            for (let j = 0; j < 60; j = j + minutos) {
+                entrevistasCandidatos++;
+                if (j == 0) {
+                    console.log(i + ":" + j + "0", ":", entrevistados[entrevistasCandidatos - 1])
+                }else{
+                    console.log(i + ":" + j, ":", entrevistados[entrevistasCandidatos - 1])
+                }
+            }
+        }
+    </script>
+</body>
+</html>
