@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokenpó</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container-principal">
+        <div class="menuvertical">
+        <h1>Bem vindo ao Jogo Jokenpó</h1>
+        <p>Escolha o seu botão!</p>
+            <div class="botoesJogo">
+                <div class="botao" id="pedra" onclick="definirValor('Pedra')">Pedra</div>
+                <div class="botao" id="papel" onclick="definirValor('Papel')">Papel</div>
+                <div class="botao" id="tesoura" onclick="definirValor('Tesoura')">Tesoura</div>
+            </div>
+            <!--Parte renderizada após a opção!-->
+            <div class="campojogo">
+                <div class="jogador"></div>
+                <div class="maquina"></div>
+                <div class="resultado"></div>
+            </div>
+            <div class="resetar" style="display: none;" id="resetar" onclick="Resetar()">Resetar</div>
+        </div>
+    </div>
+</body>
+</html>
